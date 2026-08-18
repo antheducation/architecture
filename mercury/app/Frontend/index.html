@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MERCURY CAD AI X - Modelisation 3D</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f0a132'/%3E%3Cpath d='M7 23V9l9 8 9-8v14' fill='none' stroke='%231a1206' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="barre-titre">
+  <div class="marque"><i></i><b>MERCURY</b><span>CAD AI X</span></div>
+  <div class="menu-fichier">
+    <button class="menu" data-fichier="nouveau">Nouveau</button>
+    <button class="menu" data-fichier="ouvrir">Ouvrir</button>
+    <button class="menu" data-fichier="enregistrer">Enregistrer</button>
+    <button class="menu" data-fichier="exporter">Exporter</button>
+    <button class="menu" data-fichier="convertir">Convertir</button>
+  </div>
+  <div class="titre-document" id="titre-document">SansTitre.json</div>
+  <div class="etat-connexion"><span class="pastille" id="etat-api">connexion…</span></div>
+</header>
+
+<nav class="onglets" id="onglets"></nav>
+<section class="ruban" id="ruban"></section>
+
+<main class="espace">
+  <aside class="palette gauche">
+    <div class="palette-entete">
+      <h2>Calques</h2>
+      <button class="mini" id="ajouter-calque" title="Nouveau calque">+</button>
+    </div>
+    <div class="palette-corps" id="calques"></div>
+    <div class="palette-entete"><h2>Objets</h2></div>
+    <div class="palette-corps liste-objets" id="objets"></div>
+  </aside>
+
+  <section class="scene">
+    <canvas id="vue3d"></canvas>
+    <div class="cube-vue" id="cube-vue">
+      <button data-vue="dessus">Dessus</button>
+      <button data-vue="face">Face</button>
+      <button data-vue="gauche">Gauche</button>
+      <button data-vue="droite">Droite</button>
+      <button data-vue="arriere">Arriere</button>
+      <button data-vue="iso_sud_ouest">Iso SO</button>
+    </div>
+    <div class="info-vue" id="info-vue"></div>
+  </section>
+
+  <aside class="palette droite">
+    <div class="palette-entete"><h2>Proprietes</h2></div>
+    <div class="palette-corps" id="proprietes"></div>
+    <div class="palette-entete"><h2>Parametres de l'outil</h2></div>
+    <div class="palette-corps" id="parametres-outil">
+      <p class="vide">Choisissez un outil dans le ruban.</p>
+    </div>
+    <div class="palette-entete"><h2>Journal</h2></div>
+    <div class="palette-corps journal" id="journal"></div>
+  </aside>
+</main>
+
+<section class="ligne-commande">
+  <label for="commande">Commande&nbsp;:</label>
+  <input id="commande" type="text" autocomplete="off" spellcheck="false"
+         placeholder="BOITE longueur=1000 largeur=500 hauteur=300">
+  <button id="executer">Executer</button>
+</section>
+
+<footer class="barre-etat">
+  <span id="message">Pret</span>
+  <span class="separateur"></span>
+  <button class="bascule" data-variable="ORTHO">ORTHO</button>
+  <button class="bascule" data-variable="RESOL">RESOL</button>
+  <button class="bascule active" data-variable="GRILLE">GRILLE</button>
+  <button class="bascule active" data-variable="ARETES">ARETES</button>
+  <button class="bascule" data-variable="PERSPECTIVE">PERSPECTIVE</button>
+  <select id="style-visuel" title="Style visuel"></select>
+  <span class="separateur"></span>
+  <span id="statistiques">0 objet</span>
+</footer>
+
+<div class="voile" id="voile" hidden>
+  <div class="boite-dialogue" id="dialogue">
+    <div class="dialogue-entete"><h3 id="dialogue-titre">Titre</h3>
+      <button class="mini" id="fermer-dialogue">&times;</button></div>
+    <div class="dialogue-corps" id="dialogue-corps"></div>
+    <div class="dialogue-pied" id="dialogue-pied"></div>
+  </div>
+</div>
+
+<input type="file" id="fichier-cache" hidden>
+
+<script src="viewer.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

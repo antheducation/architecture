@@ -1,0 +1,1 @@
+"""API HTTP de MERCURY CAD AI X."""

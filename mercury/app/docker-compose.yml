@@ -1,0 +1,42 @@
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      MERCURY_DB_PATH: /data/mercury.db
+      MERCURY_JWT_SECRET: ${MERCURY_JWT_SECRET:-changez-moi}
+      MERCURY_ENCRYPTION_KEY: ${MERCURY_ENCRYPTION_KEY:-changez-moi-aussi}
+    volumes:
+      - mercury_data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    image: nginx:alpine
+    ports: ["8080:80"]
+    volumes:
+      - ./Frontend:/usr/share/nginx/html:ro
+    depends_on:
+      api:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: mercury
+      POSTGRES_PASSWORD: mercury
+      POSTGRES_DB: mercury
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mercury"]
+      interval: 10s
+      retries: 5
+
+volumes:
+  mercury_data:
+  postgres_data:

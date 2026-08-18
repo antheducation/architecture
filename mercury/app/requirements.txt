@@ -1,0 +1,29 @@
+# MERCURY CAD AI X - dependances
+#
+# Le noyau CAO 3D (geometrie, solides, booleens, maillages, rendu), le moteur
+# BIM, la conception generative, le metre, le carbone, l'energie et la totalite
+# des formats de fichiers ne dependent que de la bibliotheque standard.
+# FastAPI n'est requis que pour exposer l'API HTTP et l'interface web.
+
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27,<1.0
+pydantic>=2.0,<3.0
+python-multipart>=0.0.9   # televersement de fichiers (import, conversion)
+
+# --- Developpement ---
+pytest>=7.4
+httpx>=0.26          # client de test de FastAPI
+coverage>=7.4        # mesure de la couverture des tests
+
+# --- Optionnels (detectes s'ils sont installes) ---
+# Pillow>=10.0           # lecture et ecriture JPEG, TIFF, GIF, WEBP
+# ezdxf>=1.1             # passerelle DWG via ODA File Converter
+# psycopg[binary]>=3.1   # PostgreSQL en production
+# numpy>=1.26            # acceleration des calculs lourds
+#
+# Conversion DWG : installez en plus l'un de ces moteurs sur la machine
+#   - ODA File Converter  https://www.opendesign.com/guestfiles/oda_file_converter
+#   - LibreDWG            paquet systeme libredwg-tools (dwg2dxf, dxf2dwg)
+#   - ezdxf[odafc]        pip install "ezdxf[odafc]" puis ODA File Converter
+# Sans eux, MERCURY identifie les DWG, lit leur version et leur apercu, et
+# traite tous les autres formats normalement.

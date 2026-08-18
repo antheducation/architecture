@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - name: Dependances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install coverage
+      - name: Compilation de tous les modules
+        run: python -m compileall -q CAD_Core BIM_Engine AI_Engine Estimating \
+                                     Sustainability Construction Cloud_Platform \
+                                     Database Security API
+      - name: Tests avec couverture
+        run: |
+          coverage run -m pytest -q
+          coverage report --fail-under=70
+      - name: Demarrage de l'API et sonde /health
+        run: |
+          uvicorn API.main:app --port 8000 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:8000/health && break
+            sleep 1
+          done
+          curl -sf http://localhost:8000/health
+
+  image:
+    runs-on: ubuntu-latest
+    needs: [tests]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Construction de l'image
+        run: docker build -t mercury:${{ github.sha }} .
+      - name: Demarrage et sonde
+        run: |
+          docker run -d --name mercury -p 8000:8000 mercury:${{ github.sha }}
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:8000/health && exit 0
+            sleep 2
+          done
+          docker logs mercury
+          exit 1
