@@ -14,8 +14,8 @@
 | **PAYS** | République du Niger |
 | **TÉLÉPHONE** | (+227) 20 73 40 29 / (+227) 20 73 57 23 / (+227) 96 66 46 33 |
 | **FAX** | (+227) 20 73 37 04 |
-| **ADRESSE MAIL** | mercure.niamey@gmail.com |
-| **SITE WEB** | www.mercure-niamey.com |
+| **ADRESSE MAIL** | mercure.niger@gmail.com |
+| **SITE WEB** | www.mercure-sarl.org |
 | **RCCM** | NI-NIM-2004-B-717 |
 | **NIF** | 1392/R |
 | **DOMAINES D'ACTIVITÉ** | Mobilier scolaire et mobilier de bureau, menuiserie métallique et bois, librairie-papeterie, informatique et bureautique, quincaillerie, installation réseau, électroménager |
