@@ -28,3 +28,7 @@ Le répertoire `DAO/` contient les dossiers de soumission de MERCURE SARL. Avant
 travailler, lire `DAO/CLAUDE.md` : format imposé de la page de garde, coordonnées
 officielles de l'entreprise, structure du dossier et méthode de traitement d'un DAO.
 Le modèle réutilisable est dans `DAO/_MODELE/`.
+
+Le répertoire `COMMERCIAL/` contient les études commerciales de MERCURE SARL (calculs de
+prix de revient à l'import, tarifs, offres hors appel d'offres). Les données officielles de
+l'entreprise restent celles de `DAO/_MODELE/FICHE_SOCIETE.md`.
