@@ -41,7 +41,7 @@ Le pli fermé déposé à l'ONG ONEN Dosso contient **DEUX (02) ENVELOPPES SÉPA
 
 | N° | Document | Statut |
 |---|---|---|
-| **1** | **Page de garde** — en-tête MERCURE SARL, emblème de l'ONG ONEN, référence et objet du DAO, consistance du lot *(placée en premier, avant le sommaire)* | ✅ `PAGE_DE_GARDE_technique.pdf` |
+| **1** | **Page de garde** — en-tête MERCURE SARL, emblème de l'ONG ONEN, référence et objet du DAO, maquette et photos d’activités conservées *(placée en premier, avant le sommaire)* | ✅ `PAGE_DE_GARDE.pdf` |
 | **2** | Le présent **sommaire numéroté**, paginé, signé et cacheté | ✅ Rédigé |
 | **3** | **Lettre de soumission et de transmission** adressée au Coordinateur Régional de l'ONG ONEN Dosso | ✅ Rédigée |
 | **4** | **ANNEXE 1** — Formulaire d'information générale sur la société, rempli, signé, daté et cacheté | ✅ Pré-remplie |
@@ -89,7 +89,7 @@ Le pli fermé déposé à l'ONG ONEN Dosso contient **DEUX (02) ENVELOPPES SÉPA
 
 | N° | Document | Statut |
 |---|---|---|
-| **22** | **Page de garde de l'offre financière** | ✅ `PAGE_DE_GARDE_financiere.pdf` |
+| **22** | **Page de garde de l'offre financière** | ✅ `PAGE_DE_GARDE.pdf` (2ᵉ exemplaire) |
 | **23** | **Lettre de soumission financière** : montant total en chiffres et en lettres, en Francs CFA, validité de l'offre (90 jours) | ⚠️ Montant à saisir |
 | **24** | **Devis quantitatif et estimatif détaillé** (prix unitaires, quantités, totaux), **vérifié arithmétiquement**, le total général devant être strictement conforme au montant annoncé dans la lettre | ⚠️ Prix à arrêter |
 | **25** | Récapitulatif financier (Total HT — prélèvement ISB de 2 % — net à percevoir), modalités de paiement, et **attestation de dispense ISB** si MERCURE en dispose | ⚠️ À vérifier à la DGI |

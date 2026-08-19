@@ -9,10 +9,9 @@
 
 | Fichier | Contenu | État |
 |---|---|---|
-| `PAGE_DE_GARDE_technique.pdf` | **Page de garde de l'offre technique** (format MERCURE, emblème ONEN, référence et objet du DAO) | ✅ prête à imprimer |
-| `PAGE_DE_GARDE_financiere.pdf` | Page de garde de l'offre financière | ✅ prête à imprimer |
+| `PAGE_DE_GARDE.pdf` | **Page de garde** — maquette MERCURE d'origine conservée (photos d'activités incluses), emblème ONEN, référence et objet du DAO. À imprimer en 2 exemplaires (une par enveloppe) | ✅ prête à imprimer |
 | `00_SOMMAIRE_DU_DOSSIER.md` | **Sommaire général numéroté** — plan d'assemblage des 31 pièces | ✅ |
-| `01_PAGE_DE_GARDE.md` | Descriptif de la page de garde et de ses zones | ✅ |
+| `01_PAGE_DE_GARDE.md` | Descriptif de la page de garde et de ses fichiers sources | ✅ |
 | `02_LETTRE_DE_SOUMISSION.md` | Lettre de transmission de l'offre | ✅ |
 | `03_ANNEXE1_FORMULAIRE_INFORMATION.md` | Annexe 1 ONEN pré-remplie aux données MERCURE | ✅ |
 | `04_ANNEXE2_LETTRE_ENGAGEMENT.md` | Annexe 2 ONEN — lettre d'engagement (5 pts) | ✅ |
@@ -24,7 +23,7 @@
 | `10_DEVIS_QUANTITATIF_ET_ESTIMATIF.md` | Devis quantitatif et estimatif (30 pts) | ⚠️ prix à arrêter |
 | `11_ETIQUETTES_ENVELOPPES.md` | Étiquettes des plis et instructions de dépôt | ✅ |
 | `12_LISTE_MARCHES_SIMILAIRES.md` | Liste des marchés similaires exécutés (pièce d'appui) | ✅ |
-| `assets/` | En-tête MERCURE corrigé, logo ONEN, source HTML de la page de garde | ✅ |
+| `assets/` | Maquette MERCURE d'origine, logo ONEN, en-tête corrigé, script de génération de la page de garde | ✅ |
 
 Une version **Word (.docx)** de chaque document est disponible dans le sous-dossier `docx/`,
 prête à être imprimée sur le papier à en-tête MERCURE SARL, signée et cachetée.
@@ -55,7 +54,7 @@ prête à être imprimée sur le papier à en-tête MERCURE SARL, signée et cac
 | NIF | Certificat d'immatriculation **NIF 1392/R**, DGI, du 27/05/2002 — service de rattachement CGE III | À faire légaliser |
 | Attestation de chiffre d'affaires | Cabinet **YERO Audit & Conseil**, du 16/07/2026 — CA 2023 : 423 741 086 ; 2024 : 234 357 981 ; 2025 : 161 293 480 FCFA | À joindre en pièce d'appui |
 | Liste des marchés similaires | 14 marchés exécutés à 100 % (EUCAP Sahel, MCA-Niger, Nations Unies, OMS, Save the Children, BOA, Moov…) dont **mobilier de bureau EUCAP Sahel 2019 : 79 908 357 FCFA** et **meubles et fournitures MCA-Niger 2018 : 15 376 045 FCFA** | Repris en pièce n° 12 |
-| Page de garde de référence | Maquette du DAO HKI NE-Sol132 — reprise à l'identique avec l'emblème de l'ONG ONEN | Générée en PDF |
+| Page de garde de référence | Maquette du DAO HKI NE-Sol132 — design et photos conservés, emblème et références remplacés | `PAGE_DE_GARDE.pdf` |
 
 ---
 
