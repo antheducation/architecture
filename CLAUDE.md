@@ -21,3 +21,10 @@ Use frontmatter to filter: `overview:` in service docs, `status:`/`applies_to:`/
 - **OCI artifacts**: Primary deliverable format for all builds
 - **Cluster isolation**: Each cluster independent (unit of sharding/tenancy)
 - **Resource flow**: Application → Component → Snapshot → IntegrationTestScenario → ReleasePlan → Release
+
+## Dossiers d'appel d'offres (MERCURE SARL)
+
+Le répertoire `DAO/` contient les dossiers de soumission de MERCURE SARL. Avant d'y
+travailler, lire `DAO/CLAUDE.md` : format imposé de la page de garde, coordonnées
+officielles de l'entreprise, structure du dossier et méthode de traitement d'un DAO.
+Le modèle réutilisable est dans `DAO/_MODELE/`.
